@@ -32,3 +32,25 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
+
+func _process(delta: float) -> void:
+	if Input.is_action_pressed("up"):
+		if Input.is_action_pressed("right"):
+			$texture.play("up-right")
+		elif Input.is_action_pressed("left"):
+			$texture.play("up-left")
+		else:
+			$texture.play("up")
+	elif Input.is_action_pressed("down"):
+		if Input.is_action_pressed("right"):
+			$texture.play("down-right")
+		elif Input.is_action_pressed("left"):
+			$texture.play("down-left")
+		else:
+			$texture.play("down")
+	elif Input.is_action_pressed("right"):
+		$texture.play("right")
+	elif Input.is_action_pressed("left"):
+		$texture.play("left")
+	else:
+		$texture.play("center")
