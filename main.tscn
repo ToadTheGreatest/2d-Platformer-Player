@@ -1,14 +1,17 @@
 [gd_scene format=3 uid="uid://by54af2cnmnia"]
 
 [ext_resource type="Texture2D" uid="uid://dlc7ve7qeehav" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://bdoq7x81001hq" path="res://player.tscn" id="2_0xm2m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
 texture = ExtResource("1_ig7tw")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 
 [sub_resource type="TileSet" id="TileSet_h2yge"]
 tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
 sources/2 = SubResource("TileSetAtlasSource_0xm2m")
 
 [node name="main" type="Node2D" unique_id=1206109377]
@@ -17,3 +20,6 @@ sources/2 = SubResource("TileSetAtlasSource_0xm2m")
 tile_set = SubResource("TileSet_h2yge")
 rendering_quadrant_size = 128
 format = 2
+layer_0/tile_data = PackedInt32Array(262143, 2, 0, 196608, 2, 0, 196609, 2, 0, 196610, 2, 0, 196611, 2, 0, 196612, 2, 0, 196613, 2, 0, 196614, 2, 0, 196615, 2, 0)
+
+[node name="player" parent="." unique_id=1690380270 instance=ExtResource("2_0xm2m")]
