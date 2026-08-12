@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://by54af2cnmnia"]
+
+[ext_resource type="Texture2D" uid="uid://dlc7ve7qeehav" path="res://icon.svg" id="1_ig7tw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0xm2m"]
+texture = ExtResource("1_ig7tw")
+texture_region_size = Vector2i(128, 128)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_h2yge"]
+tile_size = Vector2i(128, 128)
+sources/2 = SubResource("TileSetAtlasSource_0xm2m")
+
+[node name="main" type="Node2D" unique_id=1206109377]
+
+[node name="TileMap" type="TileMap" parent="." unique_id=1873777790]
+tile_set = SubResource("TileSet_h2yge")
+rendering_quadrant_size = 128
+format = 2
